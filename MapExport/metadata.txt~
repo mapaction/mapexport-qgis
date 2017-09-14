@@ -1,0 +1,37 @@
+# This file contains metadata for your plugin. Since 
+# version 2.0 of QGIS this is the proper way to supply 
+# information about a plugin. The old method of 
+# embedding metadata in __init__.py will 
+# is no longer supported since version 2.0.
+
+# This file should be included when you package your plugin.# Mandatory items:
+
+[general]
+name=Map Export
+qgisMinimumVersion=2.0
+description=Select a Print Composer, export a PDF and JPG, zip them up n format pdf ou image (jpg, tif, png...) plusieurs composeurs d'impression.
+version=0.1
+about=This plugin supports MapAction's file upload processes, allowing a zip file to be created for upload to MapAction's Maps and Data Catalogue. The plugin creates a new folder (named using the Print Composer name) in the location of the user's choice, saves the PDF and JPG files into it, then zips the folder contents into a file, also named as per the Print Composer, and saves it alongside the folder containing the exported files.
+author=Ant Scott (MapAction.org), based with thanks on the Maps Printer plugin by Harrissou Sant-anna (Conseil d'Architecture, d'Urbanisme et de l'Environnement du Maine-et-Loire)
+email=ascott@mapaction.org
+
+# End of mandatory metadata
+
+# Optional items:
+
+# Uncomment the following line and add your changelog:
+changelog= v.0.2 (2015-07-30)
+
+# Tags are comma separated with spaces allowed
+tags = print, export, map, composer
+
+homepage=https://github.com/
+tracker=https://github.com/
+repository=https://github.com/
+icon=icons/icon.png
+# experimental flag
+experimental=True
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
+
