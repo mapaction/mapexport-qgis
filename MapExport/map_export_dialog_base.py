@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'map_export_dialog_base.ui'
 #
-# Created: Wed Sep 13 19:35:37 2017
+# Created: Thu Sep 14 15:20:27 2017
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -51,7 +51,7 @@ class Ui_mapExport(object):
         self.horizontalLayout.addWidget(self.exportButton)
         self.buttonBox = QtGui.QDialogButtonBox(mapExport)
         self.buttonBox.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)
-        self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Close|QtGui.QDialogButtonBox.Help)
+        self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Close)
         self.buttonBox.setCenterButtons(False)
         self.buttonBox.setObjectName(_fromUtf8("buttonBox"))
         self.horizontalLayout.addWidget(self.buttonBox)

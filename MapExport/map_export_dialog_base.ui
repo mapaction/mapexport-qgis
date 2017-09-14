@@ -36,7 +36,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>:/plugins/MapExport/icons/icon.png</normaloff>:/plugins/MapExport/icons/icon.png</iconset>
+    <normaloff>:/plugins/MapExport/icons/icon.png</normaloff></iconset>
   </property>
   <property name="sizeGripEnabled">
    <bool>true</bool>

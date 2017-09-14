@@ -95,53 +95,28 @@ class MapExport:
 
         # Create action that will start plugin configuration
        
-        self.action = QAction(QIcon(':/plugins/MapExport/icons/icon.pn'),
+        self.action = QAction(QIcon(':/plugins/MapExport/icons/icon.png'),
                               self.tr(u'Export JPG and PDF and zip up'),
                               self.iface.mainWindow()
                               )
        
-        # self.helpAction = QAction(QIcon(':/plugins/MapExport/icons/about.png'),
-                                  # self.tr(u'Help'), self.iface.mainWindow()
-                                  # )
-
-        # Connect actions to context menu
-        # self.dlg.composerList.customContextMenuRequested.connect(self.context_menu)
-        # self.dlg.composerSelect.customContextMenuRequested.connect(self.context_menu)
-
-
-        # Connect the action to the run method
+         # Connect the action to the run method
         self.action.triggered.connect(self.run)
-        # self.helpAction.triggered.connect(self.showHelp)
-        # self.dlg.buttonBox.helpRequested.connect(self.showHelp)
 
         # Connect to the export button to do the real work
         self.dlg.exportButton.clicked.connect(self.saveFile)
 
-        # Connect the signal to set the "select all" checkbox behaviour
-        # self.dlg.checkBox.clicked.connect(self.on_selectAllcbox_changed)
-        # self.dlg.composerList.itemChanged.connect(self.on_composercbox_changed)
-
-        # Connect to the browser button to select export folder
+          # Connect to the browser button to select export folder
         self.dlg.browser.clicked.connect(self.browseDir)
-
-        # Connect the action to the updater button so you can update the list of composers
-        # will be useless if i can synchronise with the composer manager widgetlist
-        # self.dlg.updater.clicked.connect(self.refreshList)
-        # refresh the composer list when a composer is created or deleted (miss renaming case)
-        # self.iface.composerAdded.connect(self.refreshList)
-        # self.iface.composerWillBeRemoved.connect(self.refreshList, Qt.QueuedConnection)
-        # self.iface.composerRemoved.connect(self.refreshList)
 
         # Connect some actions to manage dialog status while another project is opened
         self.iface.newProjectCreated.connect(self.dlg.close)
         self.iface.projectRead.connect(self.renameDialog)
-        # self.iface.projectRead.connect(self.refreshList)
-
+   
         # Add toolbar button and menu item0
         self.iface.addToolBarIcon(self.action)
         self.iface.addPluginToMenu(u'&Map Export', self.action)
-        # self.iface.addPluginToMenu(u'&Map Export', self.helpAction)
-
+  
         # Hide the Cancel button at the opening
         self.dlg.btnCancel = self.dlg.buttonBox.button(QDialogButtonBox.Cancel)
         self.dlg.btnCancel.hide()
@@ -154,20 +129,6 @@ class MapExport:
         self.iface.removePluginMenu(u'&Map Export', self.action)
         # self.iface.removePluginMenu(u'&Map Export', self.helpAction)
         self.iface.removeToolBarIcon(self.action)
-    """
-    def showHelp(self):
-        Shows the help page.
-
-        locale = QSettings().value('locale/userLocale')[0:2]
-        help_file = self.plugin_dir + '/help/help_{}.html'.format(locale)
-        
-        if os.path.exists(help_file):
-            QDesktopServices.openUrl(QUrl('file:///'+ help_file))
-        else:
-            QDesktopServices.openUrl(QUrl(
-                'file:///'+ self.plugin_dir + '/help/help.html')
-                )
-        """
 
     def getNewCompo(self, w, cView):
         """Function that finds new composer to be added to the list."""
@@ -196,34 +157,23 @@ class MapExport:
 
         # Get  all the composers in a previously emptied list
         w.clear()
-        # Populate export format listbox
-        # self.listFormat(self.dlg.formatBox)
-        # Ensure the "select all" box is unchecked
-        # self.dlg.composerSelect.setChecked(False)
-
+        # Populate the drop down of composers
         for cView in self.iface.activeComposers():
             composer_name = cView.composerWindow().windowTitle()
             self.dlg.composerSelect.addItem(composer_name)
-        # w.sortItems()
-
-
+ 
     def browseDir(self):
         """Open the browser so the user selects the output directory."""
 
         settings = QSettings()
-
-        # if self.dlg.formatBox.currentIndex() == 1 : # if extension is pdf
-        #     dir = settings.value('/UI/lastSaveAsPdfFile')
-        # else:
-        dir = settings.value('/UI/lastSaveAsImageDir')  
-
         
+        # Remember the last export location (may need changing)
+        dir = settings.value('/UI/lastSaveAsImageDir')  
         folderDialog = QFileDialog.getExistingDirectory(
             None,
             '',
             dir,
-            QFileDialog.ShowDirsOnly,
-            # QFileDialog.DontResolveSymlinks
+            QFileDialog.ShowDirsOnly
             )
 
         if folderDialog == '':
@@ -248,7 +198,7 @@ class MapExport:
                     if e.errno in (errno.EACCES, errno.EPERM):
                         QMessageBox.warning(None, self.tr(u'Unable to write in folder'),
                             self.tr(u"You don't have rights to write in this folder. "\
-                            "Please, select another one!"),
+                            "Please select another one."),
                             QMessageBox.Ok, QMessageBox.Ok)
                     else:
                         raise
@@ -259,7 +209,7 @@ class MapExport:
             elif e.errno in (errno.EACCES, errno.EPERM):
                 QMessageBox.warning(None, self.tr(u'Unable to use the directory'),
                     self.tr(u"You don't have rights to create or use such a folder. " \
-                    "Please, select another one!"),
+                    "Please select another one."),
                     QMessageBox.Ok, QMessageBox.Ok)
                 self.browseDir()
             # for anything else, let user know (mind if it's worth!?)
@@ -282,7 +232,6 @@ class MapExport:
                 missed.append(y)
             else:
                 x.setStyleSheet('border-color: palette()')
-        #[missed.append(x[1]) for x in d if not x[1]]
         # and if there are missing values, show error message and stop execution
         if missed:
             self.iface.messageBar().pushMessage('Map Export : ',
@@ -297,8 +246,6 @@ class MapExport:
     def initGuiButtons(self):
         """Init the GUI to follow export processes."""
 
-        # self.dlg.printBar.setValue(0)
-        # self.dlg.printBar.setMaximum(len(rowsChecked))
         self.dlg.exportButton.setEnabled(False)
 
         # Activate the Cancel button to stop export process, and hide the Close button
@@ -306,7 +253,6 @@ class MapExport:
         self.dlg.btnClose.hide()
         self.dlg.btnCancel.show()
         self.dlg.buttonBox.rejected.connect(self.stopProcessing)
-        # self.dlg.btnCancel.clicked.connect(self.stopProcessing)
 
     def pageProcessed(self):
         """Increment the page progressbar."""
@@ -325,7 +271,6 @@ class MapExport:
         self.dlg.printinglabel.setText('')
         
         # Reset standardbuttons and their functions and labels
-        # self.dlg.btnCancel.clicked.disconnect(self.stopProcessing)
         self.dlg.buttonBox.rejected.disconnect(self.stopProcessing)
         QObject.connect(self.dlg.buttonBox, SIGNAL("rejected()"), self.dlg.reject)
         self.dlg.btnCancel.hide()
@@ -352,55 +297,36 @@ class MapExport:
         export the checked composers to the specified file format."""
 
         # Ensure list of print composers is up to date
-        # (user can launch export without having previously refreshed the list)
-        # will not be needed if the list can automatically be refreshed
-        # self.refreshList()
-        # retrieve the selected composers list
-        # self.listCheckedComposer()
         self.dlg.composerSelect.currentIndex()
         cView = [composer.composition() for composer in self.iface.activeComposers() 
                 if composer.composerWindow().windowTitle() == self.dlg.composerSelect.currentText()][0]
-        # get the output file format and directory
-        # extension = self.setFormat(self.dlg.formatBox.currentText())
+        # get the output directory
         folder = self.dlg.path.text()
         # Are there at least one composer checked,
         # an output folder indicated and an output file format chosen?
         d = {
-            # the composer list and the number of checked composers
-            # (self.dlg.composerList, len(rowsChecked)),
             # the folder box and its text
             (self.dlg.path, folder),
-            # the format list and its choice
-            # (self.dlg.formatBox, extension)
             }
 
         # check if all the mandatory infos are filled and if ok, export
         if self.checkFilled(d) and self.checkFolder(folder):
-            # x = len(rowsChecked)
             i = 0
             # Init progressbars
             self.initGuiButtons()
-
             QApplication.setOverrideCursor(Qt.BusyCursor)
 
             # for self.dlg.composerSelect.currentIndex():
             title = self.dlg.composerSelect.currentText()
             
-                # if title in rowsChecked:
             self.dlg.printinglabel.setText(
                 self.tr(u'Exporting {}...').format(title)
                 )
 
-                    # process input events in order to allow canceling
+            # process input events in order to allow canceling
             QCoreApplication.processEvents()
-            # if self.arret:
-              #  break
             self.exportCompo(cView, folder, title)
             i = i + 1
-            # self.dlg.printBar.setValue(i)
-                # self.dlg.composerList.item(
-                        # rowsChecked[title]).setCheckState(Qt.Unchecked)
-
             QApplication.restoreOverrideCursor()
 
             # show an ending message 
@@ -424,114 +350,34 @@ class MapExport:
                     level = QgsMessageBar.INFO, duration = 50
                     )
                 # keep in memory the output folder
-                """
-                if extension == '.pdf': 
-                    QSettings().setValue('/UI/lastSaveAsPdfFile', folder)
-                else:
-                    QSettings().setValue('/UI/lastSaveAsImageDir', folder)"""
-
             # Reset the GUI
             self.restoreGui()
             
-    def make_zipfile(output_filename, source_dir):
-        relroot = os.path.abspath(os.path.join(source_dir, os.pardir))
-        with zipfile.ZipFile(output_filename, "w", zipfile.ZIP_DEFLATED) as zip:
-            for root, dirs, files in os.walk(source_dir):
-                # add directory (needed for empty dirs)
-                zip.write(root, os.path.relpath(root, relroot))
-                for file in files:
-                    filename = os.path.join(root, file)
-                    if os.path.isfile(filename): # regular files only
-                        arcname = os.path.join(os.path.relpath(root, relroot), file)
-                        zip.write(filename, arcname)
-
     def exportCompo(self, cView, folder, title):
         """Function that sets how to export files."""
 
         printer = QPrinter()
         painter = QPainter()
-        """
-        if extension == '.pdf':
-            cView.composition().setUseAdvancedEffects(False)
-        else:
-            cView.composition().setUseAdvancedEffects(True)"""
 
-         #myAtlas = cView.composition().atlasComposition()
-
-        # Prepare the composition if it has an atlas
-        """
-        if myAtlas.enabled():
-            myAtlas.beginRender()
-            previous_mode = cView.composition().atlasMode()
-            cView.composition().setAtlasMode(QgsComposition.ExportAtlas)
-            # If there's no pattern for filename, inform that a default one will be used and set it
-            if len(myAtlas.filenamePattern()) == 0:
-                self.iface.messageBar().pushMessage(
-                    self.tr(u'Empty filename pattern'),
-                    self.tr(u'The print composer "{}" has an empty filename pattern. {}_$feature is used as default.').format(title, title),
-                    level = QgsMessageBar.WARNING
-                    )
-                myAtlas.setFilenamePattern(u"'{}_'||$feature".format(title))
-        """
         # Set page progressbar maximum value
         # possible for atlases once the rendering has begun
- 
         maxpages = cView.numPages()
         self.dlg.pageBar.setValue(0)
         self.dlg.pageBar.setMaximum(maxpages)
         
         # Do the export process
-        """
-        if myAtlas.enabled():
-            for i in range(0, myAtlas.numFeatures()):
-                if self.arret: break
-                # process input events
-                QCoreApplication.processEvents()
-
-                myAtlas.prepareForFeature(i)
-                current_fileName = myAtlas.currentFilename()
-                # export atlas to pdf format
-                # if extension == '.pdf':
-                  #  if myAtlas.singleFile():
-                   #     cView.composition().beginPrintAsPDF(printer, os.path.join(folder, title + '.pdf'))
-                    #    cView.composition().beginPrint(printer)
-                     #   printReady = painter.begin(printer)
-                      #  if i > 0:
-                       #     printer.newPage()
-                        cView.composition().doPrint(printer, painter)
-                    else:
-                        cView.composition().exportAsPDF(os.path.join(folder, current_fileName + '.pdf'))
-                    #increase progressbar
-                    self.pageProcessed()
-
-                # export atlas to image format
-                else:
-                    self.printToRaster(cView, folder, current_fileName, extension)
-            myAtlas.endRender()
-            painter.end()
-            # Reset atlas mode to its original value
-            cView.composition().setAtlasMode(previous_mode)
-
-        # if the composition has no atlas
-        # export PDF and JPG only
-        """
         if not os.path.exists(os.path.join(folder, title)):
             os.makedirs(os.path.join(folder, title))
         cView.exportAsPDF(os.path.join(folder, title, title + '.pdf'))
         self.printToRaster(cView, os.path.join(folder, title), title, '.jpg')
         self.pageProcessed()
-        # make_zipfile(os.path.join(folder, title), os.path.join(folder, title))
-        # zf = zipfile.ZipFile(os.path.abspath(os.path.join(path_r, os.pardir)) +  os.sep + "myzipfile.zip", "w")
         # Set the location and the file name of the zip
         zippath = os.path.join(folder, title)
-    
         zf = zipfile.ZipFile(os.path.abspath(folder) +  os.sep + title + ".zip", "w")
-
         for dirnames,folders,files in os.walk(os.path.join(folder, title)):
             #  for root, dirs, files in os.walk(folder):
             for file in files:
                 zf.write(os.path.join(os.path.join(folder, title),file),file)
-
         zf.close()
    
 
@@ -556,10 +402,6 @@ class MapExport:
         """Name the dialog with the project's title or filename."""
         
         prj = QgsProject.instance()
-        # if QgsProject.instance == None:
-            # self.dlg.reject()
-            # return
-
         if prj.title() <> '':
             self.dlg.setWindowTitle(u'Map Export - {}'.format(prj.title()))
         else:
@@ -582,13 +424,10 @@ class MapExport:
             self.renameDialog()
             # show the dialog and fill the widget the first time
             if not self.dlg.isVisible():
-                # self.populateComposerList(self.dlg.composerList)
                 self.populateComposerSelect(self.dlg.composerSelect)
                 self.dlg.show()
             else:
                 # if the dialog is already opened but not on top of other windows
                 # Put it on the top of all other widgets,
                 self.dlg.activateWindow()
-                # update the list of composers and keep the previously selected options in the dialog
-                # self.refreshList()
 

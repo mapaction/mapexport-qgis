@@ -20,14 +20,14 @@ email=ascott@mapaction.org
 # Optional items:
 
 # Uncomment the following line and add your changelog:
-changelog= v.0.2 (2015-07-30)
+changelog= v.0.1 (2017-09-14
 
 # Tags are comma separated with spaces allowed
 tags = print, export, map, composer
 
-homepage=https://github.com/
-tracker=https://github.com/
-repository=https://github.com/
+homepage=https://github.com/mapaction/mapexport-qgis
+tracker=https://github.com/mapaction/mapexport-qgis
+repository=https://github.com/mapaction/mapexport-qgis
 icon=icons/icon.png
 # experimental flag
 experimental=True
