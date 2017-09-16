@@ -25,25 +25,6 @@ import sys
 import errno
 import tempfile
 import zipfile
-import csv
-import site
-import xml.etree.cElementTree as ET
-import subprocess
-from PyQt4.QtCore import QSettings, QTranslator, qVersion, QCoreApplication
-from PyQt4.QtGui import QAction, QIcon
-import resources
-from qgis.core import QgsMapLayerRegistry
-from qgis.core import QgsMapLayer
-from qgis.core import *
-from PyQt4.QtCore import *
-from qgis.utils import *
-from qgis.gui import QgsMessageBar
-import xml.etree.cElementTree as ET
-import subprocess
-import site
-import csv
-msgBar = iface.messageBar()
-
 
 from PyQt4.QtCore import QSettings, QTranslator, qVersion, SIGNAL,\
     QCoreApplication, QFileInfo, QDir, QUrl, QTimer, Qt, QObject 
@@ -315,18 +296,10 @@ class MapExport:
         """Check if the conditions are filled to export file(s) and
         export the checked composers to the specified file format."""
 
-
-
-
         # Ensure list of print composers is up to date
         self.dlg.composerSelect.currentIndex()
         cView = [composer.composition() for composer in self.iface.activeComposers() 
                 if composer.composerWindow().windowTitle() == self.dlg.composerSelect.currentText()][0]
-        
-        
-        
-        
-        
         # get the output directory
         folder = self.dlg.path.text()
         # Are there at least one composer checked,
@@ -379,7 +352,7 @@ class MapExport:
                 # keep in memory the output folder
             # Reset the GUI
             self.restoreGui()
-
+            
     def exportCompo(self, cView, folder, title):
         """Function that sets how to export files."""
 
@@ -391,74 +364,13 @@ class MapExport:
         maxpages = cView.numPages()
         self.dlg.pageBar.setValue(0)
         self.dlg.pageBar.setMaximum(maxpages)
-           # Do the export process
+        
+        # Do the export process
         if not os.path.exists(os.path.join(folder, title)):
             os.makedirs(os.path.join(folder, title))
         cView.exportAsPDF(os.path.join(folder, title, title + '.pdf'))
         self.printToRaster(cView, os.path.join(folder, title), title, '.jpg')
         self.pageProcessed()
-        
-        """
-        Do the metadata export
-        """
-        # read CSV file & load into list
-        with open(os.path.join(self.plugin_dir,"input/metadata_items.csv"), 'r') as metadata_file:
-            reader = csv.reader(metadata_file, delimiter=',')
-            metadata_list = list(reader)
-            print(metadata_list)
-        # variable_example =  QgsExpressionContextUtils.projectScope().variable('ma_country')
-
-        # composerTitle = 'MA_Template_A3_landscape_legend_bottom' # Name of the composer you want to export
-        # extension = '.png' # Any extension supported by the plugin
-        settings = ET.Element("mapdoc")
-        # output QGIS variables
-        """
-        To add: 
-        - x y min max
-        """
-        # output project variables
-        for x in metadata_list:
-            ma_variable = str(x[0])
-            elem_name = str(x[1])
-            elem_name = elem_name.strip()
-            ma_level = str(x[2])
-            ma_level = ma_level.strip()
-            if (ma_level == 'project'):
-                elem_value = str(QgsExpressionContextUtils.projectScope().variable(ma_variable))
-                ET.SubElement(settings,elem_name).text = elem_value
-                if elem_value.strip():
-                    QgsMessageLog.logMessage(ma_variable + ' exported as ' + elem_value, 'MapExport')
-                else:
-                    msgBar.pushMessage('Warning: missing value for ' + ma_variable,  5)
-                    QgsMessageLog.logMessage('Warning: missing value for ' + ma_variable, 'MapExport')
-        # output composer variables
-        """
-        To add:
-        - themes
-        """
-        for composer in self.iface.activeComposers():
-            if composer.composerWindow().windowTitle() == self.dlg.composerSelect.currentText():
-                title = composer.composerWindow().windowTitle()
-                ET.SubElement(settings,'jpgfilename').text = composer.composerWindow().windowTitle() + '.jpg'
-                ET.SubElement(settings,'pdffilename').text = composer.composerWindow().windowTitle() + '.pdf'
-                for x in metadata_list:
-                    ma_variable = str(x[0])
-                    elem_name = str(x[1])
-                    elem_name = elem_name.strip()
-                    ma_level = str(x[2])
-                    ma_level = ma_level.strip()
-                    if ma_level == 'composer':
-                        elem_value = str(QgsExpressionContextUtils.compositionScope(composer.composition()).variable(ma_variable))
-                        ET.SubElement(settings,elem_name).text = elem_value
-                        if elem_value.strip():
-                            QgsMessageLog.logMessage(ma_variable + ' exported as ' + elem_value, 'MapExport')
-                        else:
-                            msgBar.pushMessage('Warning: missing value for ' + ma_variable,  5)
-                            QgsMessageLog.logMessage('Warning: missing value for ' + ma_variable, 'MapExport')
-                tree = ET.ElementTree(settings)
-                tree.write(os.path.join(folder, title, title + '.xml'))
-        
-        
         # Set the location and the file name of the zip
         zippath = os.path.join(folder, title)
         zf = zipfile.ZipFile(os.path.abspath(folder) +  os.sep + title + ".zip", "w")

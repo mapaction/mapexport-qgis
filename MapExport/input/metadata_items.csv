@@ -1,0 +1,10 @@
+ma_country, countries, project
+ma_crs, datum, project
+ma_glide_number, glidenumber, project
+ma_organisation, sourceorg, project
+ma_language, language, composer
+ma_created, Created, composer
+ma_map_number, mapNumber, composer
+ma_summary, summary, composer
+ma_title, title, composer
+ma_datasource, datasource, composer

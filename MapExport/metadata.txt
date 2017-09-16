@@ -9,9 +9,9 @@
 [general]
 name=Map Export
 qgisMinimumVersion=2.0
-description=Select a Print Composer, export a PDF and JPG, zip up the files.
+description=Select a Print Composer, export a PDF, JPG and metadata, zip up the files.
 version=0.1
-about=This plugin supports MapAction's file upload processes, allowing a zip file to be created for upload to MapAction's Maps and Data Catalogue. The plugin creates a new folder (named using the Print Composer name) in the location of the user's choice, saves the PDF and JPG files into it, then zips the folder contents into a file, also named as per the Print Composer, and saves it alongside the folder containing the exported files.
+about=This plugin supports MapAction's file upload processes, allowing a zip file to be created for upload to MapAction's Maps and Data Catalogue. The plugin creates a new folder (named using the Print Composer name) in a location of the user's choice, saves PDF and JPG exports of the Composer into it, creates a metadata XML file in the same location, then zips the folder contents, and saves it alongside the folder.
 author=Ant Scott (MapAction.org), based with thanks on the Maps Printer plugin by Harrissou Sant-anna (Conseil d'Architecture, d'Urbanisme et de l'Environnement du Maine-et-Loire)
 email=ascott@mapaction.org
 
@@ -20,7 +20,7 @@ email=ascott@mapaction.org
 # Optional items:
 
 # Uncomment the following line and add your changelog:
-changelog= v.0.1 (2017-09-14
+changelog= v.0.1 (2017-09-14)
 
 # Tags are comma separated with spaces allowed
 tags = print, export, map, composer
