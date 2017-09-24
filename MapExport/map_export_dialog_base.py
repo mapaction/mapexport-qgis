@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'map_export_dialog_base.ui'
 #
-# Created: Thu Sep 14 15:20:27 2017
+# Created: Fri Sep 22 11:26:36 2017
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!

@@ -3,7 +3,7 @@
 /***************************************************************************
  MapExport
                              A QGIS plugin
- Export a selected print composers to pdf and jpg, zip them up
+ Export a selected print composer to pdf and jpg, create a metadata file and zip
                               -------------------
         begin                : 2017-09-01
         git sha              : $Format:%H$
@@ -24,11 +24,9 @@ import os.path
 import sys
 import errno
 import tempfile
+import datetime
 import zipfile
-import csv
-import site
 import xml.etree.cElementTree as ET
-import subprocess
 from PyQt4.QtCore import QSettings, QTranslator, qVersion, QCoreApplication
 from PyQt4.QtGui import QAction, QIcon
 import resources
@@ -315,19 +313,12 @@ class MapExport:
         """Check if the conditions are filled to export file(s) and
         export the checked composers to the specified file format."""
 
-
-
-
         # Ensure list of print composers is up to date
         self.dlg.composerSelect.currentIndex()
         cView = [composer.composition() for composer in self.iface.activeComposers() 
                 if composer.composerWindow().windowTitle() == self.dlg.composerSelect.currentText()][0]
         
-        
-        
-        
-        
-        # get the output directory
+         # get the output directory
         folder = self.dlg.path.text()
         # Are there at least one composer checked,
         # an output folder indicated and an output file format chosen?
@@ -379,7 +370,7 @@ class MapExport:
                 # keep in memory the output folder
             # Reset the GUI
             self.restoreGui()
-
+            
     def exportCompo(self, cView, folder, title):
         """Function that sets how to export files."""
 
@@ -405,17 +396,21 @@ class MapExport:
         with open(os.path.join(self.plugin_dir,"input/metadata_items.csv"), 'r') as metadata_file:
             reader = csv.reader(metadata_file, delimiter=',')
             metadata_list = list(reader)
-            print(metadata_list)
-        # variable_example =  QgsExpressionContextUtils.projectScope().variable('ma_country')
-
-        # composerTitle = 'MA_Template_A3_landscape_legend_bottom' # Name of the composer you want to export
-        # extension = '.png' # Any extension supported by the plugin
+            # print(metadata_list)
+        
         settings = ET.Element("mapdoc")
+        mapdata = ET.SubElement(settings, "mapdata")
         # output QGIS variables
-        """
-        To add: 
-        - x y min max
-        """
+        map_extent = str(self.iface.mapCanvas().extent())
+        xmin = str(self.iface.mapCanvas().extent().xMinimum())
+        xmax = str(self.iface.mapCanvas().extent().xMaximum())
+        ymin = str(self.iface.mapCanvas().extent().yMinimum())
+        ymax = str(self.iface.mapCanvas().extent().yMaximum())
+        ET.SubElement(mapdata,'xmin').text = xmin
+        ET.SubElement(mapdata,'xmax').text = xmax
+        ET.SubElement(mapdata,'ymin').text = ymin
+        ET.SubElement(mapdata,'ymax').text = ymax
+       
         # output project variables
         for x in metadata_list:
             ma_variable = str(x[0])
@@ -425,7 +420,7 @@ class MapExport:
             ma_level = ma_level.strip()
             if (ma_level == 'project'):
                 elem_value = str(QgsExpressionContextUtils.projectScope().variable(ma_variable))
-                ET.SubElement(settings,elem_name).text = elem_value
+                ET.SubElement(mapdata,elem_name).text = elem_value
                 if elem_value.strip():
                     QgsMessageLog.logMessage(ma_variable + ' exported as ' + elem_value, 'MapExport')
                 else:
@@ -438,9 +433,27 @@ class MapExport:
         """
         for composer in self.iface.activeComposers():
             if composer.composerWindow().windowTitle() == self.dlg.composerSelect.currentText():
+                date_now = datetime.date.today().strftime("%B %d, %Y")
+                ET.SubElement(mapdata,'lastUpdated').text = date_now
                 title = composer.composerWindow().windowTitle()
-                ET.SubElement(settings,'jpgfilename').text = composer.composerWindow().windowTitle() + '.jpg'
-                ET.SubElement(settings,'pdffilename').text = composer.composerWindow().windowTitle() + '.pdf'
+                ET.SubElement(mapdata,'jpgfilename').text = composer.composerWindow().windowTitle() + '.jpg'
+                ET.SubElement(mapdata,'pdffilename').text = composer.composerWindow().windowTitle() + '.pdf'
+                item = composer.composition().getComposerItemById('main')
+                # main_map = [item for item in composer.composition().items() if item.type() == QgsComposerItem.ComposerMap]
+                # Get the attr by name and call 
+                QgsMessageLog.logMessage('Warning: map item ' + str(item),  'MapExport')
+                QgsMessageLog.logMessage('Warning: map item type ' + str(item.type),  'MapExport')
+                map_scale = getattr(item, 'scale')()
+                
+                ET.SubElement(mapdata,'scale').text = str(map_scale)
+                map_extent = item.currentMapExtent()
+                map_xmin = map_extent.xMinimum()
+                map_xmax = map_extent.xMaximum()
+                map_ymin = map_extent.yMinimum()
+                map_ymin = map_extent.yMaximum()
+                QgsMessageLog.logMessage('Scale 1 ' + str(map_xmin), 'MapExport')
+                ET.SubElement(mapdata,'xmin').text = str(map_xmin)
+                
                 for x in metadata_list:
                     ma_variable = str(x[0])
                     elem_name = str(x[1])
@@ -449,7 +462,7 @@ class MapExport:
                     ma_level = ma_level.strip()
                     if ma_level == 'composer':
                         elem_value = str(QgsExpressionContextUtils.compositionScope(composer.composition()).variable(ma_variable))
-                        ET.SubElement(settings,elem_name).text = elem_value
+                        ET.SubElement(mapdata,elem_name).text = elem_value
                         if elem_value.strip():
                             QgsMessageLog.logMessage(ma_variable + ' exported as ' + elem_value, 'MapExport')
                         else:
@@ -467,7 +480,17 @@ class MapExport:
             for file in files:
                 zf.write(os.path.join(os.path.join(folder, title),file),file)
         zf.close()
-   
+ 
+    def composeritemattr(composername, mapname, attrname,feature):
+        composers = iface.activeComposers()
+        # Find the composer with the given name
+        comp = [composer.composition() for composer in composers 
+                if composer.composerWindow().windowTitle() == composername]
+        # Find the item
+        item = comp.getComposerItemById(mapname)
+        # Get the attr by name and call 
+        return getattr(item, attrname)()
+         
 
     def printToRaster(self, cView, folder, name, ext):
         """Export to image raster."""

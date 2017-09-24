@@ -1,5 +1,5 @@
 # mapexport-qgis
-A QGIS plugin which exports and zips up a PDF and JPG for a selected Print Composer.
+A QGIS plugin which exports and zips up a PDF, JPG, and metadata file for a selected Print Composer.
 
 This plugin is a QGIS implementation of MapAction's ArcGIS MapExport toolset, which prepares map filesets and metadata for upload to online repositories.
 
