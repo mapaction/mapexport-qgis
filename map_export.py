@@ -401,6 +401,10 @@ class MapExport:
         settings = ET.Element("mapdoc")
         mapdata = ET.SubElement(settings, "mapdata")
         # output QGIS variables
+        ET.SubElement(mapdata,'operationID').text = 'product-type-testing'
+        ET.SubElement(mapdata,'versionNumber').text = '1'
+        ET.SubElement(mapdata,'status').text = 'new'
+        
         map_extent = str(self.iface.mapCanvas().extent())
         xmin = str(self.iface.mapCanvas().extent().xMinimum())
         xmax = str(self.iface.mapCanvas().extent().xMaximum())
