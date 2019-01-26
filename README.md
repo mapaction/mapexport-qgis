@@ -13,3 +13,8 @@ This is what it does:
 This plugin is in beta - full help documentation will be added in due course.
 
 For testing, a QGIS project containing the MapAction templates is stored in the 'test' folder of the plugin.
+
+## Issues
+The main map object in the Composer must have an id 'main'.
+
+Test line
