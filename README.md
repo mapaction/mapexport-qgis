@@ -16,3 +16,5 @@ For testing, a QGIS project containing the MapAction templates is stored in the 
 
 ## Issues
 The main map object in the Composer must have an id 'main'.
+
+Test line
