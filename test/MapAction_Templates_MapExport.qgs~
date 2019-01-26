@@ -1,20 +1,19 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.14.3-Essen">
+<qgis projectname="" version="2.18.14">
   <title></title>
+  <autotransaction active="0"/>
+  <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::Checked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="aonb20170923143054243" name="aonb">
-      <customproperties/>
-    </layer-tree-layer>
   </layer-tree-group>
   <relations/>
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>-169958.85328856692649424</xmin>
-      <ymin>284133.5240748735377565</ymin>
-      <xmax>1342286.40353089733980596</xmax>
-      <ymax>1364313.23884286591783166</ymax>
+      <xmin>3400754.55157850123941898</xmin>
+      <ymin>445759.86912015557754785</ymin>
+      <xmax>4912999.80839796550571918</xmax>
+      <ymax>1525939.583888147957623</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -37,19 +36,11 @@
     </layer_coordinate_transform_info>
   </mapcanvas>
   <layer-tree-canvas>
-    <custom-order enabled="0">
-      <item>aonb20170923143054243</item>
-    </custom-order>
+    <custom-order enabled="0"/>
   </layer-tree-canvas>
-  <legend updateDrawingOrder="true">
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="aonb" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="aonb20170923143054243" visible="1"/>
-      </filegroup>
-    </legendlayer>
-  </legend>
+  <legend updateDrawingOrder="true"/>
   <Composer title="MA_Template_A3_landscape_legend_side" visible="0">
-    <Composition resizeToContentsMarginLeft="0" snapping="0" showPages="1" guidesVisible="1" resizeToContentsMarginTop="0" alignmentSnap="1" printResolution="297" paperWidth="420" gridVisible="0" snapGridOffsetX="0" smartGuides="1" snapGridOffsetY="0" resizeToContentsMarginRight="0" snapTolerancePixels="5" printAsRaster="0" generateWorldFile="0" paperHeight="297" numPages="1" snapGridResolution="10" resizeToContentsMarginBottom="0">
+    <Composition resizeToContentsMarginLeft="0" snapping="0" showPages="1" guidesVisible="1" resizeToContentsMarginTop="0" worldFileMap="" alignmentSnap="1" printResolution="297" paperWidth="420" gridVisible="0" snapGridOffsetX="0" smartGuides="1" snapGridOffsetY="0" resizeToContentsMarginRight="0" snapTolerancePixels="5" printAsRaster="0" generateWorldFile="0" paperHeight="297" numPages="1" snapGridResolution="10" resizeToContentsMarginBottom="0">
       <symbol alpha="1" clip_to_extent="1" type="fill" name="">
         <layer pass="0" class="SimpleFill" locked="0">
           <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -67,7 +58,7 @@
       </symbol>
       <SnapLine y1="0" x1="0" y2="297" x2="0"/>
       <ComposerLabel valign="32" marginX="1" marginY="1" labelText="[% @ma_disclaimer %]" htmlState="0" halign="1">
-        <LabelFont description="Arial,7,-1,5,50,0,0,0,0,0" style="Regular"/>
+        <LabelFont description="Arial,7,-1,5,50,0,0,0,0,0" style=""/>
         <FontColor red="0" blue="0" green="0"/>
         <ComposerItem pagey="271.461" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="10.4145" y="271.461" visibility="1" zValue="33" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="68.9084" outlineWidth="0.3" excludeFromExports="0" uuid="{5737227b-c272-4511-afdf-76c383e55d7d}" height="12.384" itemRotation="0" frame="false" pagex="10.4145">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
@@ -76,7 +67,7 @@
         </ComposerItem>
       </ComposerLabel>
       <ComposerLabel valign="32" marginX="1" marginY="1" labelText="[% @ma_acknowledgements %]" htmlState="0" halign="1">
-        <LabelFont description="Arial,7,-1,5,50,0,0,0,0,0" style="Regular"/>
+        <LabelFont description="Arial,7,-1,5,50,0,0,0,0,0" style=""/>
         <FontColor red="0" blue="0" green="0"/>
         <ComposerItem pagey="263.955" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="10.4145" y="263.955" visibility="1" zValue="32" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="66.8149" outlineWidth="0.3" excludeFromExports="0" uuid="{63bcfdcf-8565-4d6f-b873-cdc7cdcd8f00}" height="7.50547" itemRotation="0" frame="false" pagex="10.4145">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
@@ -85,7 +76,7 @@
         </ComposerItem>
       </ComposerLabel>
       <ComposerLabel valign="32" marginX="1" marginY="1" labelText="[% @ma_email %]" htmlState="0" halign="1">
-        <LabelFont description="Arial,7,-1,5,50,0,0,0,0,0" style="Regular"/>
+        <LabelFont description="Arial,7,-1,5,50,0,0,0,0,0" style=""/>
         <FontColor red="0" blue="0" green="0"/>
         <ComposerItem pagey="258.701" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="10.7445" y="258.701" visibility="1" zValue="31" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="36.9644" outlineWidth="0.3" excludeFromExports="0" uuid="{8dea59ff-7306-4f2a-a5e7-edfe95b37da3}" height="5.25383" itemRotation="0" frame="false" pagex="10.7445">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
@@ -94,7 +85,7 @@
         </ComposerItem>
       </ComposerLabel>
       <ComposerLabel valign="32" marginX="1" marginY="1" labelText="[% @ma_web %]" htmlState="0" halign="1">
-        <LabelFont description="Arial,7,-1,5,50,0,0,0,0,0" style="Regular"/>
+        <LabelFont description="Arial,7,-1,5,50,0,0,0,0,0" style=""/>
         <FontColor red="0" blue="0" green="0"/>
         <ComposerItem pagey="254.203" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="10.7445" y="254.203" visibility="1" zValue="30" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="42.4059" outlineWidth="0.3" excludeFromExports="0" uuid="{550d0f00-5ef6-476c-aa33-ac8dc438c9d6}" height="4.49891" itemRotation="0" frame="false" pagex="10.7445">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
@@ -405,14 +396,14 @@
         <fillColor2 alpha="255" red="255" blue="255" green="255"/>
         <strokeColor alpha="255" red="0" blue="0" green="0"/>
         <textColor alpha="255" red="0" blue="0" green="0"/>
-        <ComposerItem pagey="187.581" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="38.3002" y="187.581" visibility="1" zValue="10" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="38.1623" outlineWidth="0.3" excludeFromExports="0" uuid="{e520fdb4-dcb8-4565-a8fa-1837d3c1021c}" height="10.3" itemRotation="0" frame="false" pagex="38.3002">
+        <ComposerItem pagey="187.581" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="38.3002" y="187.581" visibility="1" zValue="10" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="38.1959" outlineWidth="0.3" excludeFromExports="0" uuid="{e520fdb4-dcb8-4565-a8fa-1837d3c1021c}" height="10.3" itemRotation="0" frame="false" pagex="38.3002">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
           <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
           <customproperties/>
         </ComposerItem>
       </ComposerScaleBar>
       <ComposerLabel valign="32" marginX="1" marginY="1" labelText="Produced by [% @ma_organisation %]&#xa;" htmlState="0" halign="1">
-        <LabelFont description="Arial,7,-1,5,50,0,0,0,0,0" style="Regular"/>
+        <LabelFont description="Arial,7,-1,5,50,0,0,0,0,0" style=""/>
         <FontColor red="0" blue="0" green="0"/>
         <ComposerItem pagey="249.408" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="10.7445" y="249.408" visibility="1" zValue="9" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="69.6097" outlineWidth="0.3" excludeFromExports="0" uuid="{f5a87b7b-75e0-4316-b7a3-ab629e8d603f}" height="7.04363" itemRotation="0" frame="false" pagex="10.7445">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
@@ -447,7 +438,7 @@
           <customproperties/>
         </ComposerItem>
       </ComposerLabel>
-      <ComposerPicture resizeMode="0" svgBorderWidth="0.2" pictureRotation="0" pictureWidth="23.1553" svgFillColor="255,255,255,255" svgBorderColor="0,0,0,255" file="S:/Crash_move_template_folder/2016-mm-dd-destination-BLANKv01/GIS/3_Mapping/31_Resources/315_Logos/MapAction/mapaction_logo.jpg" pictureHeight="23.2974" mapId="-1" anchorPoint="4">
+      <ComposerPicture resizeMode="0" svgBorderWidth="0.2" pictureRotation="0" pictureWidth="23.1553" svgFillColor="255,255,255,255" svgBorderColor="0,0,0,255" northMode="0" file="S:/Crash_move_template_folder/2016-mm-dd-destination-BLANKv01/GIS/3_Mapping/31_Resources/315_Logos/MapAction/mapaction_logo.jpg" northOffset="0" pictureHeight="23.2974" mapId="-1" anchorPoint="4">
         <ComposerItem pagey="13.8026" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="16.3188" y="13.8026" visibility="1" zValue="5" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="58.2434" outlineWidth="0.3" excludeFromExports="0" uuid="{4b6cf8b7-c3d1-443c-b796-c8b1bb488b01}" height="23.2974" itemRotation="0" frame="false" pagex="16.3188">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
           <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
@@ -455,7 +446,7 @@
           <customproperties/>
         </ComposerItem>
       </ComposerPicture>
-      <ComposerMap mapRotation="0" keepLayerSet="false" id="1" previewMode="Cache" drawCanvasItems="true">
+      <ComposerMap followPreset="false" mapRotation="0" keepLayerSet="false" followPresetName="" id="1" previewMode="Cache" drawCanvasItems="true">
         <Extent ymin="-645660.26270624413155019" xmin="1936188.20876908907666802" ymax="1796731.78603475145064294" xmax="4378580.25751008465886116"/>
         <LayerSet/>
         <Grid/>
@@ -487,6 +478,7 @@
                 <prop k="angle" v="0"/>
                 <prop k="color" v="0,0,0,255"/>
                 <prop k="horizontal_anchor_point" v="1"/>
+                <prop k="joinstyle" v="bevel"/>
                 <prop k="name" v="circle"/>
                 <prop k="offset" v="0,0"/>
                 <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -507,13 +499,13 @@
           <annotationFontProperties description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" style=""/>
         </ComposerMapGrid>
         <AtlasMap scalingMode="2" atlasDriven="0" margin="0.10000000000000001"/>
-        <ComposerItem pagey="9.1" page="1" id="" lastValidViewScaleFactor="1.33236" positionMode="2" positionLock="false" x="349.6" y="9.1" visibility="1" zValue="4" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="60" outlineWidth="0.25" excludeFromExports="0" uuid="{e8011305-c51b-49fd-ae27-dc22612cd760}" height="60" itemRotation="0" frame="true" pagex="349.6">
+        <ComposerItem pagey="9.1" page="1" id="" lastValidViewScaleFactor="1.32403" positionMode="2" positionLock="false" x="349.6" y="9.1" visibility="1" zValue="4" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="60" outlineWidth="0.25" excludeFromExports="0" uuid="{e8011305-c51b-49fd-ae27-dc22612cd760}" height="60" itemRotation="0" frame="true" pagex="349.6">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
           <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
           <customproperties/>
         </ComposerItem>
       </ComposerMap>
-      <ComposerMap mapRotation="0" keepLayerSet="false" id="0" previewMode="Cache" drawCanvasItems="true">
+      <ComposerMap followPreset="false" mapRotation="0" keepLayerSet="false" followPresetName="" id="0" previewMode="Cache" drawCanvasItems="true">
         <Extent ymin="-1018581.6463599264388904" xmin="1936188.20876908907666802" ymax="1130350.70930284354835749" xmax="4378580.25751008465886116"/>
         <LayerSet/>
         <Grid/>
@@ -545,6 +537,7 @@
                 <prop k="angle" v="0"/>
                 <prop k="color" v="0,0,0,255"/>
                 <prop k="horizontal_anchor_point" v="1"/>
+                <prop k="joinstyle" v="bevel"/>
                 <prop k="name" v="circle"/>
                 <prop k="offset" v="0,0"/>
                 <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -565,7 +558,7 @@
           <annotationFontProperties description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" style=""/>
         </ComposerMapGrid>
         <AtlasMap scalingMode="2" atlasDriven="0" margin="0.10000000000000001"/>
-        <ComposerItem pagey="9.1" page="1" id="main" lastValidViewScaleFactor="1.33236" positionMode="2" positionLock="false" x="95" y="9.1" visibility="1" zValue="3" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="314.6" outlineWidth="0.25" excludeFromExports="0" uuid="{bbdc98ab-43ed-4197-a3f6-72ea1b11e164}" height="276.8" itemRotation="0" frame="true" pagex="95">
+        <ComposerItem pagey="9.1" page="1" id="main" lastValidViewScaleFactor="1.32403" positionMode="2" positionLock="false" x="95" y="9.1" visibility="1" zValue="3" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="314.6" outlineWidth="0.25" excludeFromExports="0" uuid="{bbdc98ab-43ed-4197-a3f6-72ea1b11e164}" height="276.8" itemRotation="0" frame="true" pagex="95">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
           <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
           <customproperties/>
@@ -611,6 +604,11 @@
           <value>ma_theme_2</value>
           <value>ma_theme_3</value>
           <value>ma_title</value>
+          <value>ma_map_number</value>
+          <value>ma_title</value>
+          <value>ma_created</value>
+          <value>ma_summary</value>
+          <value>ma_datasource</value>
         </property>
         <property key="variableValues">
           <value>00 Month 20XX / 00:00</value>
@@ -620,12 +618,17 @@
           <value>Theme 2</value>
           <value></value>
           <value>Title (as at D Mon YYYY)</value>
+          <value>number ls </value>
+          <value>Title (as at D Mon YYYY) ls </value>
+          <value>2000-01-04</value>
+          <value>summary ls </value>
+          <value>data ls</value>
         </property>
       </customproperties>
     </Composition>
   </Composer>
-  <Composer title="MA_Template_A3_portrait_legend_bottom" visible="1">
-    <Composition resizeToContentsMarginLeft="0" snapping="0" showPages="1" guidesVisible="1" resizeToContentsMarginTop="0" alignmentSnap="0" printResolution="300" paperWidth="297" gridVisible="0" snapGridOffsetX="0" smartGuides="0" snapGridOffsetY="0" resizeToContentsMarginRight="0" snapTolerancePixels="5" printAsRaster="0" generateWorldFile="0" paperHeight="420" numPages="1" snapGridResolution="10" resizeToContentsMarginBottom="0">
+  <Composer title="MA_Template_A3_portrait_legend_bottom" visible="0">
+    <Composition resizeToContentsMarginLeft="0" snapping="0" showPages="1" guidesVisible="1" resizeToContentsMarginTop="0" worldFileMap="" alignmentSnap="0" printResolution="300" paperWidth="297" gridVisible="0" snapGridOffsetX="0" smartGuides="0" snapGridOffsetY="0" resizeToContentsMarginRight="0" snapTolerancePixels="5" printAsRaster="0" generateWorldFile="0" paperHeight="420" numPages="1" snapGridResolution="10" resizeToContentsMarginBottom="0">
       <symbol alpha="1" clip_to_extent="1" type="fill" name="">
         <layer pass="0" class="SimpleFill" locked="0">
           <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -642,7 +645,7 @@
         </layer>
       </symbol>
       <ComposerLabel valign="32" marginX="1" marginY="1" labelText="[% @ma_disclaimer %]" htmlState="0" halign="1">
-        <LabelFont description="Arial,7,-1,5,50,0,0,0,0,0" style="Regular"/>
+        <LabelFont description="Arial,7,-1,5,50,0,0,0,0,0" style=""/>
         <FontColor red="0" blue="0" green="0"/>
         <ComposerItem pagey="394.028" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="217.419" y="394.028" visibility="1" zValue="33" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="46.0745" outlineWidth="0.3" excludeFromExports="0" uuid="{5abfefde-8e92-4beb-b069-b1047d88d307}" height="13.3648" itemRotation="0" frame="false" pagex="217.419">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
@@ -651,7 +654,7 @@
         </ComposerItem>
       </ComposerLabel>
       <ComposerLabel valign="32" marginX="1" marginY="1" labelText="[% @ma_acknowledgements %]" htmlState="0" halign="1">
-        <LabelFont description="Arial,7,-1,5,50,0,0,0,0,0" style="Regular"/>
+        <LabelFont description="Arial,7,-1,5,50,0,0,0,0,0" style=""/>
         <FontColor red="0" blue="0" green="0"/>
         <ComposerItem pagey="385.778" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="218.163" y="385.778" visibility="1" zValue="32" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="40.5063" outlineWidth="0.3" excludeFromExports="0" uuid="{8919fb29-ee8f-40ec-ae4c-13a7f2ae57f0}" height="10.2356" itemRotation="0" frame="false" pagex="218.163">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
@@ -660,7 +663,7 @@
         </ComposerItem>
       </ComposerLabel>
       <ComposerLabel valign="32" marginX="1" marginY="1" labelText="[% @ma_email %]" htmlState="0" halign="1">
-        <LabelFont description="Arial,7,-1,5,50,0,0,0,0,0" style="Regular"/>
+        <LabelFont description="Arial,7,-1,5,50,0,0,0,0,0" style=""/>
         <FontColor red="0" blue="0" green="0"/>
         <ComposerItem pagey="383.006" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="218.245" y="383.006" visibility="1" zValue="31" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="26.5402" outlineWidth="0.3" excludeFromExports="0" uuid="{d599a846-0161-4e28-8fd0-b98e91e39d0d}" height="4.50925" itemRotation="0" frame="false" pagex="218.245">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
@@ -669,7 +672,7 @@
         </ComposerItem>
       </ComposerLabel>
       <ComposerLabel valign="32" marginX="1" marginY="1" labelText="[% @ma_web %]" htmlState="0" halign="1">
-        <LabelFont description="Arial,7,-1,5,50,0,0,0,0,0" style="Regular"/>
+        <LabelFont description="Arial,7,-1,5,50,0,0,0,0,0" style=""/>
         <FontColor red="0" blue="0" green="0"/>
         <ComposerItem pagey="380.245" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="218.245" y="380.245" visibility="1" zValue="30" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="42.4059" outlineWidth="0.3" excludeFromExports="0" uuid="{9fab9475-6d09-4415-9269-6b094e644c90}" height="4.49891" itemRotation="0" frame="false" pagex="218.245">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
@@ -678,7 +681,7 @@
         </ComposerItem>
       </ComposerLabel>
       <ComposerLabel valign="32" marginX="1" marginY="1" labelText="Produced by [% @ma_organisation %]&#xa;" htmlState="0" halign="1">
-        <LabelFont description="Arial,7,-1,5,50,0,0,0,0,0" style="Regular"/>
+        <LabelFont description="Arial,7,-1,5,50,0,0,0,0,0" style=""/>
         <FontColor red="0" blue="0" green="0"/>
         <ComposerItem pagey="377.429" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="218.245" y="377.429" visibility="1" zValue="29" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="35.1106" outlineWidth="0.3" excludeFromExports="0" uuid="{26feb5f3-f7b6-409a-bfe0-49f09bc13104}" height="4.80988" itemRotation="0" frame="false" pagex="218.245">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
@@ -890,7 +893,7 @@
         <fillColor2 alpha="255" red="255" blue="255" green="255"/>
         <strokeColor alpha="255" red="0" blue="0" green="0"/>
         <textColor alpha="255" red="0" blue="0" green="0"/>
-        <ComposerItem pagey="345.939" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="237.793" y="345.939" visibility="1" zValue="13" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="37.0358" outlineWidth="0.3" excludeFromExports="0" uuid="{27d44d15-f5c9-4530-a91f-eae463589d91}" height="10.3" itemRotation="0" frame="false" pagex="237.793">
+        <ComposerItem pagey="345.939" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="237.793" y="345.939" visibility="1" zValue="13" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="37.0694" outlineWidth="0.3" excludeFromExports="0" uuid="{27d44d15-f5c9-4530-a91f-eae463589d91}" height="10.3" itemRotation="0" frame="false" pagex="237.793">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
           <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
           <customproperties/>
@@ -958,7 +961,7 @@
           <customproperties/>
         </ComposerItem>
       </ComposerLabel>
-      <ComposerPicture resizeMode="0" svgBorderWidth="0.2" pictureRotation="0" pictureWidth="20.2609" svgFillColor="255,255,255,255" svgBorderColor="0,0,0,255" file="C:/Users/SSD Sussex AIR/Desktop/MapAction SB/QGIS/Logos for templates/ukaid_300x300.jpg" pictureHeight="20.3852" mapId="-1" anchorPoint="4">
+      <ComposerPicture resizeMode="0" svgBorderWidth="0.2" pictureRotation="0" pictureWidth="20.2609" svgFillColor="255,255,255,255" svgBorderColor="0,0,0,255" northMode="0" file="C:/Users/SSD Sussex AIR/Desktop/MapAction SB/QGIS/Logos for templates/ukaid_300x300.jpg" northOffset="0" pictureHeight="20.3852" mapId="-1" anchorPoint="4">
         <ComposerItem pagey="384.486" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="262.911" y="384.486" visibility="1" zValue="7" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="22.5693" outlineWidth="0.3" excludeFromExports="0" uuid="{76365551-d7c2-49b8-b911-22943ee5b123}" height="20.3852" itemRotation="0" frame="false" pagex="262.911">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
           <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
@@ -966,7 +969,7 @@
           <customproperties/>
         </ComposerItem>
       </ComposerPicture>
-      <ComposerPicture resizeMode="0" svgBorderWidth="0.2" pictureRotation="0" pictureWidth="23.1553" svgFillColor="255,255,255,255" svgBorderColor="0,0,0,255" file="C:/Users/SSD Sussex AIR/Desktop/MapAction SB/QGIS/Logos for templates/mapaction_logo.jpg" pictureHeight="23.2974" mapId="-1" anchorPoint="4">
+      <ComposerPicture resizeMode="0" svgBorderWidth="0.2" pictureRotation="0" pictureWidth="23.1553" svgFillColor="255,255,255,255" svgBorderColor="0,0,0,255" northMode="0" file="C:/Users/SSD Sussex AIR/Desktop/MapAction SB/QGIS/Logos for templates/mapaction_logo.jpg" northOffset="0" pictureHeight="23.2974" mapId="-1" anchorPoint="4">
         <ComposerItem pagey="351.636" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="15.5609" y="351.636" visibility="1" zValue="6" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="58.2434" outlineWidth="0.3" excludeFromExports="0" uuid="{4897224c-476b-4518-b159-0c1af78d9145}" height="23.2974" itemRotation="0" frame="false" pagex="15.5609">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
           <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
@@ -1052,7 +1055,7 @@
           <customproperties/>
         </ComposerItem>
       </ComposerShape>
-      <ComposerMap mapRotation="0" keepLayerSet="false" id="1" previewMode="Cache" drawCanvasItems="true">
+      <ComposerMap followPreset="false" mapRotation="0" keepLayerSet="false" followPresetName="" id="1" previewMode="Cache" drawCanvasItems="true">
         <Extent ymin="-645660.26270624413155019" xmin="2079426.63162200967781246" ymax="1467982.09321057400666177" xmax="4235341.83465716429054737"/>
         <LayerSet/>
         <Grid/>
@@ -1084,6 +1087,7 @@
                 <prop k="angle" v="0"/>
                 <prop k="color" v="0,0,0,255"/>
                 <prop k="horizontal_anchor_point" v="1"/>
+                <prop k="joinstyle" v="bevel"/>
                 <prop k="name" v="circle"/>
                 <prop k="offset" v="0,0"/>
                 <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -1104,13 +1108,13 @@
           <annotationFontProperties description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" style=""/>
         </ComposerMapGrid>
         <AtlasMap scalingMode="2" atlasDriven="0" margin="0.10000000000000001"/>
-        <ComposerItem pagey="10" page="1" id="Inset Map" lastValidViewScaleFactor="1.00727" positionMode="2" positionLock="false" x="237" y="10" visibility="1" zValue="2" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="51" outlineWidth="0.25" excludeFromExports="0" uuid="{57aef183-3654-4f74-9350-e1c69eed3da4}" height="50" itemRotation="0" frame="true" pagex="237">
+        <ComposerItem pagey="10" page="1" id="Inset Map" lastValidViewScaleFactor="1.09103" positionMode="2" positionLock="false" x="237" y="10" visibility="1" zValue="2" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="51" outlineWidth="0.25" excludeFromExports="0" uuid="{57aef183-3654-4f74-9350-e1c69eed3da4}" height="50" itemRotation="0" frame="true" pagex="237">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
           <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
           <customproperties/>
         </ComposerItem>
       </ComposerMap>
-      <ComposerMap mapRotation="0" keepLayerSet="false" id="0" previewMode="Cache" drawCanvasItems="true">
+      <ComposerMap followPreset="false" mapRotation="0" keepLayerSet="false" followPresetName="" id="0" previewMode="Cache" drawCanvasItems="true">
         <Extent ymin="-645660.26270624413155019" xmin="2079426.63162200967781246" ymax="1807378.55379292299039662" xmax="4235341.83465716429054737"/>
         <LayerSet/>
         <Grid/>
@@ -1142,6 +1146,7 @@
                 <prop k="angle" v="0"/>
                 <prop k="color" v="0,0,0,255"/>
                 <prop k="horizontal_anchor_point" v="1"/>
+                <prop k="joinstyle" v="bevel"/>
                 <prop k="name" v="circle"/>
                 <prop k="offset" v="0,0"/>
                 <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -1162,7 +1167,7 @@
           <annotationFontProperties description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" style=""/>
         </ComposerMapGrid>
         <AtlasMap scalingMode="2" atlasDriven="0" margin="0.10000000000000001"/>
-        <ComposerItem pagey="10" page="1" id="main" lastValidViewScaleFactor="1.00727" positionMode="3" positionLock="false" x="8" y="10" visibility="1" zValue="1" background="true" transparency="0" frameJoinStyle="round" blendMode="0" width="280" outlineWidth="0.25" excludeFromExports="0" uuid="{19fb9a7d-1d42-40ed-8672-64ee9de8b8de}" height="318.589" itemRotation="0" frame="true" pagex="8">
+        <ComposerItem pagey="10" page="1" id="main" lastValidViewScaleFactor="1.09103" positionMode="3" positionLock="false" x="8" y="10" visibility="1" zValue="1" background="true" transparency="0" frameJoinStyle="round" blendMode="0" width="280" outlineWidth="0.25" excludeFromExports="0" uuid="{19fb9a7d-1d42-40ed-8672-64ee9de8b8de}" height="318.589" itemRotation="0" frame="true" pagex="8">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
           <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
           <customproperties/>
@@ -1171,27 +1176,55 @@
       <customproperties>
         <property key="variableNames">
           <value>ma_created</value>
+          <value>ma_datasource</value>
           <value>ma_map_number</value>
           <value>ma_summary</value>
           <value>ma_theme_1</value>
           <value>ma_theme_2</value>
           <value>ma_theme_3</value>
           <value>ma_title</value>
+          <value>ma_map_number</value>
+          <value>ma_title</value>
+          <value>ma_summary</value>
+          <value>ma_datasource</value>
+          <value>ma_map_number</value>
+          <value>ma_title</value>
+          <value>ma_summary</value>
+          <value>ma_datasource</value>
+          <value>ma_map_number</value>
+          <value>ma_title</value>
+          <value>ma_created</value>
+          <value>ma_summary</value>
+          <value>ma_datasource</value>
         </property>
         <property key="variableValues">
           <value>DD Mon YYYY</value>
-          <value>MA001</value>
-          <value>Include summary here</value>
+          <value></value>
+          <value>1123</value>
+          <value>1123</value>
           <value>Theme 1</value>
           <value>Theme 2</value>
           <value></value>
           <value>Title (as at D Mon YYYY)</value>
+          <value>1123</value>
+          <value>Title (as at D Mon YYYY)</value>
+          <value>1123</value>
+          <value></value>
+          <value>number</value>
+          <value>Title (as at D Mon YYYY)</value>
+          <value>summary</value>
+          <value>data</value>
+          <value>number</value>
+          <value>Title (as at D Mon YYYY)</value>
+          <value>2011-03-03</value>
+          <value>summary</value>
+          <value>data</value>
         </property>
       </customproperties>
     </Composition>
   </Composer>
-  <Composer title="MA_Template_A3_landscape_legend_bottom" visible="1">
-    <Composition resizeToContentsMarginLeft="0" snapping="0" showPages="1" guidesVisible="1" resizeToContentsMarginTop="0" alignmentSnap="1" printResolution="300" paperWidth="420" gridVisible="0" snapGridOffsetX="0" smartGuides="1" snapGridOffsetY="0" resizeToContentsMarginRight="0" snapTolerancePixels="5" printAsRaster="0" generateWorldFile="0" paperHeight="297" numPages="1" snapGridResolution="10" resizeToContentsMarginBottom="0">
+  <Composer title="MA_Template_A3_landscape_legend_bottom" visible="0">
+    <Composition resizeToContentsMarginLeft="0" snapping="0" showPages="1" guidesVisible="1" resizeToContentsMarginTop="0" worldFileMap="{bff23119-994f-4818-a505-a0b55fb3e687}" alignmentSnap="1" printResolution="299" paperWidth="420" gridVisible="0" snapGridOffsetX="0" smartGuides="1" snapGridOffsetY="0" resizeToContentsMarginRight="0" snapTolerancePixels="5" printAsRaster="0" generateWorldFile="0" paperHeight="297" numPages="1" snapGridResolution="10" resizeToContentsMarginBottom="0">
       <symbol alpha="1" clip_to_extent="1" type="fill" name="">
         <layer pass="0" class="SimpleFill" locked="0">
           <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -1216,8 +1249,8 @@
           <customproperties/>
         </ComposerItem>
       </ComposerLabel>
-      <ComposerMap mapRotation="0" keepLayerSet="false" id="0" previewMode="Render" drawCanvasItems="true">
-        <Extent ymin="41253.23328406590007944" xmin="2645.83385758541407995" ymax="573753.23382721596863121" xmax="977645.83485208521597087"/>
+      <ComposerMap followPreset="false" mapRotation="0" keepLayerSet="false" followPresetName="" id="0" previewMode="Render" drawCanvasItems="true">
+        <Extent ymin="41253.23328406590007944" xmin="2645.83385758541407995" ymax="573753.23382721573580056" xmax="977645.83485208521597087"/>
         <LayerSet/>
         <Grid/>
         <ComposerMapGrid rightAnnotationDirection="0" gridFramePenColor="0,0,0,255" show="0" bottomAnnotationPosition="1" annotationPrecision="3" showAnnotation="0" topFrameDivisions="0" uuid="{097b9256-2b50-4b9a-81fc-e62c8c2a3748}" leftAnnotationDirection="0" topAnnotationPosition="1" rightAnnotationDisplay="0" offsetX="0" offsetY="0" rightFrameDivisions="0" gridStyle="0" annotationFontColor="0,0,0,255" intervalX="0" gridFrameSideFlags="15" intervalY="0" bottomAnnotationDirection="0" leftAnnotationDisplay="0" leftFrameDivisions="0" frameFillColor1="255,255,255,255" annotationExpression="" frameFillColor2="0,0,0,255" crossLength="3" gridFramePenThickness="0.5" bottomAnnotationDisplay="0" unit="0" topAnnotationDisplay="0" leftAnnotationPosition="1" blendMode="0" gridFrameStyle="0" rightAnnotationPosition="1" gridFrameWidth="2" name="Grid 1" annotationFormat="0" bottomFrameDivisions="0" topAnnotationDirection="0" frameAnnotationDistance="1">
@@ -1248,6 +1281,7 @@
                 <prop k="angle" v="0"/>
                 <prop k="color" v="0,0,0,255"/>
                 <prop k="horizontal_anchor_point" v="1"/>
+                <prop k="joinstyle" v="bevel"/>
                 <prop k="name" v="circle"/>
                 <prop k="offset" v="0,0"/>
                 <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -1268,7 +1302,7 @@
           <annotationFontProperties description="Ubuntu,11,-1,5,50,0,0,0,0,0" style=""/>
         </ComposerMapGrid>
         <AtlasMap scalingMode="2" atlasDriven="0" margin="0.10000000000000001"/>
-        <ComposerItem pagey="7.2" page="1" id="main" lastValidViewScaleFactor="1.33236" positionMode="0" positionLock="false" x="9.875" y="7.2" visibility="1" zValue="33" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="390" outlineWidth="0.3" excludeFromExports="0" uuid="{bff23119-994f-4818-a505-a0b55fb3e687}" height="213" itemRotation="0" frame="false" pagex="9.875">
+        <ComposerItem pagey="7.2" page="1" id="main" lastValidViewScaleFactor="1.32403" positionMode="0" positionLock="false" x="9.875" y="7.2" visibility="1" zValue="33" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="390" outlineWidth="0.3" excludeFromExports="0" uuid="{bff23119-994f-4818-a505-a0b55fb3e687}" height="213" itemRotation="0" frame="false" pagex="9.875">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
           <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
           <customproperties>
@@ -1284,7 +1318,7 @@
         </ComposerItem>
       </ComposerMap>
       <ComposerLabel valign="32" marginX="1" marginY="1" labelText="[% @ma_disclaimer %]" htmlState="0" halign="1">
-        <LabelFont description="Arial,6,-1,5,50,0,0,0,0,0" style="Regular"/>
+        <LabelFont description="Arial,6,-1,5,50,0,0,0,0,0" style=""/>
         <FontColor red="0" blue="0" green="0"/>
         <ComposerItem pagey="283.869" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="276.792" y="283.869" visibility="1" zValue="32" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="66.416" outlineWidth="0.3" excludeFromExports="0" uuid="{f1321417-7602-4dfb-bd1e-a4b3fb225ffc}" height="8.256" itemRotation="0" frame="false" pagex="276.792">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
@@ -1293,7 +1327,7 @@
         </ComposerItem>
       </ComposerLabel>
       <ComposerLabel valign="32" marginX="1" marginY="1" labelText="[% @ma_acknowledgements %]" htmlState="0" halign="1">
-        <LabelFont description="Arial,6,-1,5,50,0,0,0,0,0" style="Regular"/>
+        <LabelFont description="Arial,6,-1,5,50,0,0,0,0,0" style=""/>
         <FontColor red="0" blue="0" green="0"/>
         <ComposerItem pagey="276.926" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="276.667" y="276.926" visibility="1" zValue="31" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="66.8149" outlineWidth="0.3" excludeFromExports="0" uuid="{4bacde29-2011-4630-9af9-8c696b805687}" height="7.50547" itemRotation="0" frame="false" pagex="276.667">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
@@ -1302,7 +1336,7 @@
         </ComposerItem>
       </ComposerLabel>
       <ComposerLabel valign="32" marginX="1" marginY="1" labelText="[% @ma_email %]" htmlState="0" halign="1">
-        <LabelFont description="Arial,6,-1,5,50,0,0,0,0,0" style="Regular"/>
+        <LabelFont description="Arial,6,-1,5,50,0,0,0,0,0" style=""/>
         <FontColor red="0" blue="0" green="0"/>
         <ComposerItem pagey="272.75" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="321.666" y="272.75" visibility="1" zValue="30" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="21.668" outlineWidth="0.3" excludeFromExports="0" uuid="{644250b8-16bb-49be-b4ac-b96eefe138df}" height="4.50987" itemRotation="0" frame="false" pagex="321.666">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
@@ -1311,7 +1345,7 @@
         </ComposerItem>
       </ComposerLabel>
       <ComposerLabel valign="32" marginX="1" marginY="1" labelText="[% @ma_web %]" htmlState="0" halign="1">
-        <LabelFont description="Arial,6,-1,5,50,0,0,0,0,0" style="Regular"/>
+        <LabelFont description="Arial,6,-1,5,50,0,0,0,0,0" style=""/>
         <FontColor red="0" blue="0" green="0"/>
         <ComposerItem pagey="272.75" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="300.988" y="272.75" visibility="1" zValue="29" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="21.6127" outlineWidth="0.3" excludeFromExports="0" uuid="{5aa3fd3f-113c-4249-8b32-b25e7baaa9be}" height="4.49891" itemRotation="0" frame="false" pagex="300.988">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
@@ -1320,7 +1354,7 @@
         </ComposerItem>
       </ComposerLabel>
       <ComposerLabel valign="32" marginX="1" marginY="1" labelText="Produced by [% @ma_organisation %]&#xa;" htmlState="0" halign="1">
-        <LabelFont description="Arial,6,-1,5,50,0,0,0,0,0" style="Regular"/>
+        <LabelFont description="Arial,6,-1,5,50,0,0,0,0,0" style=""/>
         <FontColor red="0" blue="0" green="0"/>
         <ComposerItem pagey="273.24" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="276.542" y="273.24" visibility="1" zValue="28" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="32.7927" outlineWidth="0.3" excludeFromExports="0" uuid="{734cae61-729a-46d7-9545-57b462514f85}" height="4.62438" itemRotation="0" frame="false" pagex="276.542">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
@@ -1523,7 +1557,7 @@
         <fillColor2 alpha="255" red="255" blue="255" green="255"/>
         <strokeColor alpha="255" red="0" blue="0" green="0"/>
         <textColor alpha="255" red="0" blue="0" green="0"/>
-        <ComposerItem pagey="232.628" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="291.624" y="232.628" visibility="1" zValue="13" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="14.6053" outlineWidth="0.3" excludeFromExports="0" uuid="{640009b5-d6da-43b0-b172-39b02f32cfbb}" height="10.3" itemRotation="0" frame="false" pagex="291.624">
+        <ComposerItem pagey="232.628" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="291.624" y="232.628" visibility="1" zValue="13" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="14.6389" outlineWidth="0.3" excludeFromExports="0" uuid="{640009b5-d6da-43b0-b172-39b02f32cfbb}" height="10.3" itemRotation="0" frame="false" pagex="291.624">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
           <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
           <customproperties/>
@@ -1556,7 +1590,7 @@
           <customproperties/>
         </ComposerItem>
       </ComposerLabel>
-      <ComposerPicture resizeMode="0" svgBorderWidth="0.2" pictureRotation="0" pictureWidth="20.2609" svgFillColor="255,255,255,255" svgBorderColor="0,0,0,255" file="C:/Users/SSD Sussex AIR/Desktop/MapAction SB/QGIS/Logos for templates/OCHA.jpg" pictureHeight="20.3852" mapId="-1" anchorPoint="4">
+      <ComposerPicture resizeMode="0" svgBorderWidth="0.2" pictureRotation="0" pictureWidth="20.2609" svgFillColor="255,255,255,255" svgBorderColor="0,0,0,255" northMode="0" file="C:/Users/SSD Sussex AIR/Desktop/MapAction SB/QGIS/Logos for templates/OCHA.jpg" northOffset="0" pictureHeight="20.3852" mapId="-1" anchorPoint="4">
         <ComposerItem pagey="269.932" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="385.557" y="269.932" visibility="1" zValue="9" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="22.5693" outlineWidth="0.3" excludeFromExports="0" uuid="{c8aa1310-7b8f-4293-8bb5-2ca4703323bf}" height="20.3852" itemRotation="0" frame="false" pagex="385.557">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
           <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
@@ -1634,7 +1668,7 @@
           <customproperties/>
         </ComposerItem>
       </ComposerShape>
-      <ComposerPicture resizeMode="0" svgBorderWidth="0.2" pictureRotation="0" pictureWidth="23.1553" svgFillColor="255,255,255,255" svgBorderColor="0,0,0,255" file="C:/Users/SSD Sussex AIR/Desktop/MapAction SB/QGIS/Logos for templates/mapaction_logo.jpg" pictureHeight="23.2974" mapId="-1" anchorPoint="4">
+      <ComposerPicture resizeMode="0" svgBorderWidth="0.2" pictureRotation="0" pictureWidth="23.1553" svgFillColor="255,255,255,255" svgBorderColor="0,0,0,255" northMode="0" file="C:/Users/SSD Sussex AIR/Desktop/MapAction SB/QGIS/Logos for templates/mapaction_logo.jpg" northOffset="0" pictureHeight="23.2974" mapId="-1" anchorPoint="4">
         <ComposerItem pagey="236.657" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="14.2118" y="236.657" visibility="1" zValue="4" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="58.2434" outlineWidth="0.3" excludeFromExports="0" uuid="{fc6c39c4-0d9f-4b12-94b7-dc42ce813aa3}" height="23.2974" itemRotation="0" frame="false" pagex="14.2118">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
           <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
@@ -1730,9 +1764,11 @@
           <value>ma_theme_2</value>
           <value>ma_theme_3</value>
           <value>ma_title</value>
+          <value>ma_map_number</value>
+          <value>ma_summary</value>
         </property>
         <property key="variableValues">
-          <value>D Mon YYYY</value>
+          <value>1/3/2018</value>
           <value>List data sources</value>
           <value>MA001</value>
           <value>Include summary here</value>
@@ -1740,127 +1776,13 @@
           <value>Theme 2</value>
           <value></value>
           <value>Title (as at D Mon YYYY)</value>
+          <value>MA002</value>
+          <value>1123</value>
         </property>
       </customproperties>
     </Composition>
   </Composer>
-  <projectlayers>
-    <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>aonb20170923143054243</id>
-      <datasource>/home/antony/Downloads/aonb.shp</datasource>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>aonb</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +towgs84=446.448,-125.157,542.06,0.15,0.247,0.842,-20.489 +units=m +no_defs</proj4>
-          <srsid>2437</srsid>
-          <srid>27700</srid>
-          <authid>EPSG:27700</authid>
-          <description>OSGB 1936 / British National Grid</description>
-          <projectionacronym>tmerc</projectionacronym>
-          <ellipsoidacronym>airy</ellipsoidacronym>
-          <geographicflag>false</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <provider encoding="UTF-8">ogr</provider>
-      <previewExpression></previewExpression>
-      <vectorjoins/>
-      <layerDependencies/>
-      <expressionfields/>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
-      </map-layer-style-manager>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="code">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="name">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="desig_date">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="hotlink">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="stat_area">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="shape_leng">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="shape_area">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-      </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
-        <symbols>
-          <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
-            <layer pass="0" class="SimpleFill" locked="0">
-              <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="153,117,0,255"/>
-              <prop k="joinstyle" v="bevel"/>
-              <prop k="offset" v="0,0"/>
-              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="offset_unit" v="MM"/>
-              <prop k="outline_color" v="0,0,0,255"/>
-              <prop k="outline_style" v="solid"/>
-              <prop k="outline_width" v="0.26"/>
-              <prop k="outline_width_unit" v="MM"/>
-              <prop k="style" v="solid"/>
-            </layer>
-          </symbol>
-        </symbols>
-        <rotation/>
-        <sizescale scalemethod="diameter"/>
-      </renderer-v2>
-      <labeling type="simple"/>
-      <customproperties/>
-      <blendMode>0</blendMode>
-      <featureBlendMode>0</featureBlendMode>
-      <layerTransparency>0</layerTransparency>
-      <displayfield>name</displayfield>
-      <label>0</label>
-      <labelattributes>
-        <label fieldname="" text="Label"/>
-        <family fieldname="" name="Ubuntu"/>
-        <size fieldname="" units="pt" value="12"/>
-        <bold fieldname="" on="0"/>
-        <italic fieldname="" on="0"/>
-        <underline fieldname="" on="0"/>
-        <strikeout fieldname="" on="0"/>
-        <color fieldname="" red="0" blue="0" green="0"/>
-        <x fieldname=""/>
-        <y fieldname=""/>
-        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
-        <angle fieldname="" value="0" auto="0"/>
-        <alignment fieldname="" value="center"/>
-        <buffercolor fieldname="" red="255" blue="255" green="255"/>
-        <buffersize fieldname="" units="pt" value="1"/>
-        <bufferenabled fieldname="" on=""/>
-        <multilineenabled fieldname="" on=""/>
-        <selectedonly on=""/>
-      </labelattributes>
-      <annotationform></annotationform>
-      <excludeAttributesWMS/>
-      <excludeAttributesWFS/>
-      <attributeactions/>
-      <editform></editform>
-      <editforminit/>
-      <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
-      <editforminitcode><![CDATA[]]></editforminitcode>
-      <featformsuppress>0</featformsuppress>
-      <editorlayout>generatedlayout</editorlayout>
-      <widgets/>
-      <conditionalstyles>
-        <rowstyles/>
-        <fieldstyles/>
-      </conditionalstyles>
-    </maplayer>
-  </projectlayers>
+  <projectlayers/>
   <properties>
     <Variables>
       <variableNames type="QStringList">
@@ -1873,6 +1795,209 @@
         <value>ma_language</value>
         <value>ma_organisation</value>
         <value>ma_web</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_language</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_language</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_language</value>
+        <value>ma_country</value>
+        <value>ma_glide_number</value>
+        <value>ma_crs</value>
+        <value>ma_organisation</value>
+        <value>ma_country</value>
+        <value>ma_language</value>
       </variableNames>
       <variableValues type="QStringList">
         <value>Supported by DFID and the Ministry of Foreign Affairs of the Netherlands.
@@ -1885,6 +2010,209 @@
         <value>English</value>
         <value>MapAction</value>
         <value>www.mapaction.org</value>
+        <value>Country1</value>
+        <value>Country1</value>
+        <value>Country2</value>
+        <value>Country3</value>
+        <value>glide-number</value>
+        <value>WGS 84</value>
+        <value>MapAction</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number1</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number1</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number1</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number1</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number1</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number1</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number1</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number1</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number1</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number1</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number1</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number1</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number1</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number1</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number1</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number1</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number1</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number1</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number1</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number2</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number2</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number2</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number2</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number2</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number2</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number2</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number2</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country3</value>
+        <value>glide-number2</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country3</value>
+        <value>Country2</value>
+        <value>glide-number2</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country2</value>
+        <value>Country2</value>
+        <value>glide-number2</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country2</value>
+        <value>Country2</value>
+        <value>glide-number2</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country2</value>
+        <value>Country2</value>
+        <value>glide-number2</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country2</value>
+        <value>Country2</value>
+        <value>glide-number2</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>Country2</value>
+        <value>hello world</value>
+        <value>hello world</value>
+        <value>glide-number2</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>hello world</value>
+        <value>hello world</value>
+        <value>glide-number2</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>hello world</value>
+        <value>None</value>
+        <value>hello world</value>
+        <value>glide-number2</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>hello world</value>
+        <value>None</value>
+        <value>hello world</value>
+        <value>glide-number2</value>
+        <value>WGS 85</value>
+        <value>MapAction1</value>
+        <value>hello world</value>
+        <value>None</value>
+        <value>hello world ls</value>
+        <value>glide-number2 ls</value>
+        <value>WGS 85 ls </value>
+        <value>MapAction1 ls </value>
+        <value>hello world ls</value>
+        <value>None ls </value>
       </variableValues>
     </Variables>
     <WMSContactPerson type="QString"></WMSContactPerson>
